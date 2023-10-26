@@ -1,6 +1,66 @@
-<<<<<<< HEAD
-hi this is my software exam of sem v
-sanket naikf
-=======
-hi this is my software exam of s
->>>>>>> 7a3db36055abfbda399c5e15204d3d20d371fb40
+package calculate;
+
+public class calcu {
+/**
+ * 
+ */
+	  int a ;
+	  int b;
+
+	  public calcu(int a, int b) {
+	    this.a = a;
+	    this.b = b;
+	  }
+/**
+ * 
+ * @return
+ */
+	  public int multiplication() {
+	    return a*b;
+	  }
+	  /**
+	   * 
+	   * @return
+	   */
+	  public int addition() {
+	    return a/b; 
+	  }
+
+	}
+.....................................................................
+
+
+package calculate;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class ready {
+
+  private int a = 10;
+  private int b = 5;
+  
+  @BeforeEach
+  public void setup() {
+    calcu sam = new calcu(a, b); 
+  }
+  @Test
+  public void testmultiplication() {
+    int expected = 50;
+    int actual = a*b;
+   
+    assertEquals(expected, actual);
+  }
+  /**
+   * 
+   */
+  @Test
+  public void testaddition() {
+    int expected = 2;
+    int actual = a/b;
+    assertEquals(expected, actual);
+  }
+
+}
